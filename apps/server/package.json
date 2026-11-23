@@ -1,0 +1,11 @@
+{
+  "name": "@nexlect/server",
+  "version": "1.0.0",
+  "description": "Nexlect backend API application",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "private": true
+}

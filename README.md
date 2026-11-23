@@ -70,31 +70,31 @@ The following features represent the planned scope of the project. Their impleme
 
 Nexlect will support three primary user roles:
 
-| Role | Responsibilities |
-|---|---|
-| Student | Access courses, share resources, participate in discussions, and join study groups. |
+| Role                 | Responsibilities                                                                              |
+| -------------------- | --------------------------------------------------------------------------------------------- |
+| Student              | Access courses, share resources, participate in discussions, and join study groups.           |
 | Class Representative | Publish announcements and manage permitted course-related communication for assigned courses. |
-| Administrator | Manage platform activities, review reports, and moderate inappropriate content. |
+| Administrator        | Manage platform activities, review reports, and moderate inappropriate content.               |
 
 Authorization will be enforced on the backend. Administrative moderation privileges will be restricted to administrators, while class representatives will only exercise their assigned course-level permissions.
 
 ## Technology Stack
 
-| Area | Technology |
-|---|---|
-| Frontend | React, TypeScript |
-| Build Tool | Vite |
-| Styling | Tailwind CSS, shadcn/ui |
-| Routing | React Router |
-| Backend | Node.js, Express |
-| Language | TypeScript |
-| Database | PostgreSQL |
-| ORM | Prisma |
-| Validation | Zod |
-| API Documentation | Swagger / OpenAPI |
-| Testing | Vitest, Supertest |
-| Version Control | Git and GitHub |
-| CI/CD | GitHub Actions |
+| Area              | Technology              |
+| ----------------- | ----------------------- |
+| Frontend          | React, TypeScript       |
+| Build Tool        | Vite                    |
+| Styling           | Tailwind CSS, shadcn/ui |
+| Routing           | React Router            |
+| Backend           | Node.js, Express        |
+| Language          | TypeScript              |
+| Database          | PostgreSQL              |
+| ORM               | Prisma                  |
+| Validation        | Zod                     |
+| API Documentation | Swagger / OpenAPI       |
+| Testing           | Vitest, Supertest       |
+| Version Control   | Git and GitHub          |
+| CI/CD             | GitHub Actions          |
 
 ## Project Architecture
 

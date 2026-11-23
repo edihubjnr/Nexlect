@@ -1,0 +1,11 @@
+{
+  "name": "@nexlect/shared",
+  "version": "1.0.0",
+  "description": "Nexlect shared types, schemas, and utilities",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "private": true
+}

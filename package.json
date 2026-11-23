@@ -1,0 +1,41 @@
+{
+  "name": "nexlect",
+  "version": "1.0.0",
+  "description": "Nexlect - A university academic collaboration platform",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edihubjnr/nexlect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/edihubjnr/nexlect/issues"
+  },
+  "homepage": "https://github.com/edihubjnr/nexlect#readme",
+  "private": true,
+  "workspaces": [
+    "apps/client",
+    "apps/server",
+    "packages/shared"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@typescript/native": "npm:typescript@^7.0.2",
+    "eslint": "^10.15.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.14.0",
+    "prettier": "^3.10.1",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "typescript-eslint": "^8.73.0"
+  }
+}
