@@ -11,9 +11,8 @@ interface NavbarProps {
 }
 
 const navigationLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'Features', href: '/#features' },
-  { label: 'About', href: '/#about' },
+  { label: 'Features', href: '#features' },
+  { label: 'About', href: '#about' },
 ];
 
 function Navbar({ theme, onToggleTheme }: NavbarProps) {
@@ -21,10 +20,19 @@ function Navbar({ theme, onToggleTheme }: NavbarProps) {
 
   const closeMenu = () => setIsMenuOpen(false);
 
+  const scrollToHome = () => {
+    closeMenu();
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8"
+        className="mx-auto flex w-full max-w-screen-2xl items-center justify-between px-6 py-3 lg:px-10"
         aria-label="Main navigation"
       >
         {/* Brand */}
@@ -32,7 +40,7 @@ function Navbar({ theme, onToggleTheme }: NavbarProps) {
           to="/"
           className="flex items-center gap-3"
           aria-label="Nexlect home"
-          onClick={closeMenu}
+          onClick={scrollToHome}
         >
           <img
             src="/brand/nexlect-logo.png"
@@ -41,9 +49,7 @@ function Navbar({ theme, onToggleTheme }: NavbarProps) {
           />
 
           <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-tight text-foreground">
-              Nexlect
-            </span>
+            <span className="text-xl font-bold tracking-tight text-foreground">Nexlect</span>
 
             <span className="hidden text-xs text-muted-foreground sm:block">
               Connecting Minds. Building Knowledge.
@@ -53,10 +59,17 @@ function Navbar({ theme, onToggleTheme }: NavbarProps) {
 
         {/* Desktop navigation */}
         <div className="hidden items-center gap-8 md:flex">
+          <Link
+            to="/"
+            onClick={scrollToHome}
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+          >
+            Home
+          </Link>
           {navigationLinks.map((link) => (
             <a
-              key={link.label}
               href={link.href}
+              key={link.label}
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               {link.label}
@@ -124,6 +137,13 @@ function Navbar({ theme, onToggleTheme }: NavbarProps) {
           className="border-t border-border bg-background px-6 py-5 md:hidden"
         >
           <div className="flex flex-col gap-4">
+            <Link
+              to="/"
+              onClick={scrollToHome}
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+            >
+              Home
+            </Link>
             {navigationLinks.map((link) => (
               <a
                 key={link.label}
@@ -137,11 +157,7 @@ function Navbar({ theme, onToggleTheme }: NavbarProps) {
 
             <div className="my-1 border-t border-border" />
 
-            <Link
-              to="/login"
-              onClick={closeMenu}
-              className="text-sm font-medium text-foreground"
-            >
+            <Link to="/login" onClick={closeMenu} className="text-sm font-medium text-foreground">
               Log in
             </Link>
 
